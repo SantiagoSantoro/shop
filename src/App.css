@@ -2,26 +2,33 @@
   text-align: center;
 }
 
-nav {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  height: 60px;
-}
-
 .nav-items {
-  
-    display: flex;
-    justify-content: center;  /* Centra los elementos horizontalmente */
-    align-items: center;      /* Centra los elementos verticalmente */
-    flex: 5;                  /* Ocupa el espacio disponible */
-    gap: 20px;                /* Espacio entre los elementos, ajusta según tu preferencia */
-
-
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center;
+  gap: 20px; /* Espacio entre los botones */
 }
+
+.nav-items button {
+  background-color: #333; /* Color de fondo oscuro */
+  color: white;           /* Texto blanco */
+  border: none;           /* Sin bordes */
+  padding: 10px 20px;     /* Espaciado dentro del botón */
+  font-size: 16px;        /* Tamaño de fuente adecuado */
+  cursor: pointer;        /* Cambia el cursor a pointer en hover */
+  border-radius: 5px;     /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto de transición al cambiar de color */
+}
+
+.nav-items button:hover {
+  background-color: #555; /* Cambia el fondo al pasar el ratón */
+}
+
+.nav-items button:focus {
+  outline: none; /* Remueve el borde de enfoque por defecto */
+  background-color: #777; /* Color de fondo cuando está enfocado */
+}
+
 
 .cart {
   margin-left: auto;
@@ -55,11 +62,46 @@ nav {
 }
 
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
+
+.Controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones y la cantidad */
+  margin-bottom: 10px;
+}
+
+.Button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.Button:hover {
+  background-color: #555;
+}
+
+.Number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
 
 
